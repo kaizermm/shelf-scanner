@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS preferences (
+  device_id TEXT PRIMARY KEY,
+  data JSONB NOT NULL DEFAULT '{}'::jsonb,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS scans (
+  id BIGSERIAL PRIMARY KEY,
+  device_id TEXT NOT NULL,
+  image_path TEXT NOT NULL,
+  image_hash TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS scan_books (
+  scan_id BIGINT REFERENCES scans(id) ON DELETE CASCADE,
+  books JSONB NOT NULL DEFAULT '[]'::jsonb,
+  provider TEXT NOT NULL DEFAULT 'openai',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (scan_id)
+);

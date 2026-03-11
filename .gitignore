@@ -1,0 +1,32 @@
+﻿# Dependencies
+node_modules/
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Uploads
+backend/uploads/
+
+# Build output
+frontend/dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+cookies.txt
+*.jpg
+*.png
+test-payload.json
+
+# Local data files
+*.json.bak
+backend/history.json
+backend/prefs.json
+frontend/history.json
