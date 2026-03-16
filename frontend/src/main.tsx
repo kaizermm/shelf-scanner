@@ -7,6 +7,7 @@ import Results        from "./pages/Results";
 import Preferences    from "./pages/Preferences";
 import History        from "./pages/History";
 import ReadingHistory from "./pages/ReadingHistory";
+import Orders         from "./pages/Orders";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/preferences"     element={<Preferences />} />
         <Route path="/history"         element={<History />} />
         <Route path="/reading-history" element={<ReadingHistory />} />
+        <Route path="/orders"          element={<Orders />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

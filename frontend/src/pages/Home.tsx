@@ -21,7 +21,6 @@ export default function Home() {
       alignItems: "center", justifyContent: "center",
       padding: 24, fontFamily: "system-ui, sans-serif",
     }}>
-      {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <div style={{ fontSize: 64 }}>📚</div>
         <h1 style={{ color: "white", fontSize: 40, margin: "12px 0 8px", fontWeight: 800 }}>
@@ -40,13 +39,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main action */}
       <Link to="/scan" style={{ textDecoration: "none", marginBottom: 32 }}>
         <div style={{
           background: "white", borderRadius: 20,
           padding: "28px 48px", textAlign: "center",
           cursor: "pointer", boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
-          transition: "transform 0.1s",
         }}
           onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
           onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
@@ -61,19 +58,19 @@ export default function Home() {
         </div>
       </Link>
 
-      {/* Secondary nav */}
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
         {[
-          { to: "/history",         icon: "🕓", label: "Scan History"    },
-          { to: "/reading-history", icon: "📖", label: "Reading List"    },
-          { to: "/preferences",     icon: "⚙️", label: "Preferences"     },
+          { to: "/orders",          icon: "🛒", label: "My Orders"      },
+          { to: "/history",         icon: "🕓", label: "Scan History"   },
+          { to: "/reading-history", icon: "📖", label: "Reading List"   },
+          { to: "/preferences",     icon: "⚙️", label: "Preferences"    },
         ].map(({ to, icon, label }) => (
           <Link key={to} to={to} style={{ textDecoration: "none" }}>
             <div style={{
               background: "rgba(255,255,255,0.12)",
               border: "1px solid rgba(255,255,255,0.2)",
               borderRadius: 14, padding: "16px 24px",
-              textAlign: "center", cursor: "pointer", minWidth: 120,
+              textAlign: "center", cursor: "pointer", minWidth: 110,
               color: "white",
             }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.2)")}
